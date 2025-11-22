@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect } from 'react';
 import ReactFlow, {
   Background,
   Controls,
@@ -10,6 +10,7 @@ import ReactFlow, {
 import 'reactflow/dist/style.css';
 import SpatialNode from './components/SpatialNode';
 import CustomEdge from './components/CustomEdge';
+import EncapsulateButton from './components/EncapsulateButton';
 import useStore from './store/useStore';
 
 
@@ -86,6 +87,7 @@ function Flow() {
         defaultEdgeOptions={{ type: 'custom', animated: false }}
         edgeTypes={edgeTypes}
         fitView
+        multiSelectionKeyCode="Control"
       >
         <Background color="#333" gap={GRID_SIZE} />
         <Controls className="bg-blueprint-border border-blueprint-border fill-blueprint-text text-blueprint-text" />
@@ -94,6 +96,7 @@ function Flow() {
           maskColor="rgba(0,0,0, 0.5)"
           className="bg-blueprint-grid border border-blueprint-border"
         />
+        <EncapsulateButton />
       </ReactFlow>
     </div>
   );

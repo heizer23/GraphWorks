@@ -9,7 +9,6 @@ export default function CustomEdge({
     targetPosition,
     style = {},
     markerEnd,
-    data,
 }: EdgeProps) {
     const [edgePath] = getBezierPath({
         sourceX,
@@ -20,24 +19,11 @@ export default function CustomEdge({
         targetPosition,
     });
 
-    // Debug logging
-    console.log('CustomEdge render - data:', data, 'active:', data?.active);
-
     return (
-        <>
-            <BaseEdge
-                path={edgePath}
-                markerEnd={markerEnd}
-                style={style}
-            />
-            {data?.active && (
-                <path
-                    d={edgePath}
-                    className="animated-edge"
-                    fill="none"
-                    strokeLinecap="round"
-                />
-            )}
-        </>
+        <BaseEdge
+            path={edgePath}
+            markerEnd={markerEnd}
+            style={style}
+        />
     );
 }

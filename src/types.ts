@@ -16,4 +16,6 @@ export interface NodeData {
     outputs: Port[];
     label?: string;
     inventory: Record<string, number>; // Resource ID -> Count
+    isComposite?: boolean; // True if this is a composite/encapsulated node
+    childNodeIds?: string[]; // IDs of nodes inside this composite (for future drill-down)
 }

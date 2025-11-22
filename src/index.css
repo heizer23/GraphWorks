@@ -11,25 +11,6 @@
   color: #e5e5e5;
 }
 
-@keyframes dashdraw {
-  to {
-    stroke-dashoffset: -20;
-  }
-}
-
-.react-flow__edge-path.animated-edge {
-  stroke: #fcd34d !important;
-  /* Brighter yellow */
-  stroke-width: 5 !important;
-  /* Thicker */
-  stroke-dasharray: 15 5 !important;
-  /* Longer dashes */
-  animation: dashdraw 0.8s linear infinite !important;
-  /* Slightly faster */
-  filter: drop-shadow(0 0 4px #fcd34d) !important;
-  /* Glow effect */
-}
-
 body {
   margin: 0;
   width: 100vw;
