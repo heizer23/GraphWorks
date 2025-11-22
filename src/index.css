@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  background-color: #0a0a0a;
+  color: #e5e5e5;
+}
+
+@keyframes dashdraw {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+.react-flow__edge-path.animated-edge {
+  stroke: #fcd34d !important;
+  /* Brighter yellow */
+  stroke-width: 5 !important;
+  /* Thicker */
+  stroke-dasharray: 15 5 !important;
+  /* Longer dashes */
+  animation: dashdraw 0.8s linear infinite !important;
+  /* Slightly faster */
+  filter: drop-shadow(0 0 4px #fcd34d) !important;
+  /* Glow effect */
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* React Flow Customization */
+.react-flow__node {
+  border-radius: 0;
+}
+
+.react-flow__handle {
+  width: 8px;
+  height: 8px;
+  background: #555;
+  border: 1px solid #888;
+  border-radius: 0;
+}
+
+.react-flow__handle-top {
+  top: -4px;
+}
+
+.react-flow__handle-bottom {
+  bottom: -4px;
+}
+
+.react-flow__handle-left {
+  left: -4px;
+}
+
+.react-flow__handle-right {
+  right: -4px;
+}
